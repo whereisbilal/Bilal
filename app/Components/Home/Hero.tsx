@@ -52,15 +52,13 @@ const Hero = () => {
 
         {/* About */}
         <p className="max-w-3xl leading-8 text-gray-700">
-          I build modern web applications using React, Node.js, and MongoDB.
-          Passionate about writing clean code and continuously learning new
-          technologies.
+          I'm a Frontend Developer learning Full-Stack Development. I enjoy building modern web applications and improving my skills through practical projects.
         </p>
 
         {/* Social Links */}
         <div className="flex items-center gap-6 text-xl text-gray-600">
           <a
-            href="https://github.com/mrvornex"
+            href="https://github.com/whereisbilal"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -70,7 +68,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/mrvornex"
+            href="https://www.linkedin.com/in/whereisbilal"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -80,7 +78,7 @@ const Hero = () => {
           </a>
 
           <a
-            href="https://x.com/mrvornex"
+            href="https://x.com/whereisbilal"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="X"
@@ -134,7 +132,7 @@ const Hero = () => {
           <div className="w-full overflow-x-auto">
             <div className="flex min-w-max justify-center">
               <GitHubCalendar
-                username="mrvornex"
+                username="whereisbilal"
                 colorScheme="light"
                 fontSize={14}
                 blockSize={12}

@@ -1,22 +1,27 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { VscVscode } from "react-icons/vsc";
 
 import {
   FaHtml5,
   FaCss3Alt,
   FaJs,
   FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaGithub,
 } from "react-icons/fa";
 
 import {
-  SiTailwindcss,
-  SiMongodb,
-  SiNodedotjs,
-  SiExpress,
   SiTypescript,
   SiNextdotjs,
-  SiGit,
+  SiTailwindcss,
+  SiRedux,
+  SiVite,
+  SiExpress,
+  SiMongodb,
+  // SiVisualstudiocode,
 } from "react-icons/si";
 
 const skills = [
@@ -25,120 +30,128 @@ const skills = [
     name: "HTML5",
     icon: <FaHtml5 />,
     color: "#E34F26",
-    experience: "3+ Years",
   },
   {
     id: 2,
     name: "CSS3",
     icon: <FaCss3Alt />,
     color: "#1572B6",
-    experience: "3+ Years",
   },
   {
     id: 3,
     name: "JavaScript",
     icon: <FaJs />,
     color: "#F7DF1E",
-    experience: "2.5+ Years",
   },
   {
     id: 4,
-    name: "React",
-    icon: <FaReact />,
-    color: "#61DAFB",
-    experience: "2+ Years",
-  },
-  {
-    id: 5,
-    name: "Next.js",
-    icon: <SiNextdotjs />,
-    color: "#000000",
-    experience: "1.5+ Years",
-  },
-  {
-    id: 6,
     name: "TypeScript",
     icon: <SiTypescript />,
     color: "#3178C6",
-    experience: "1.5+ Years",
+  },
+  {
+    id: 5,
+    name: "React",
+    icon: <FaReact />,
+    color: "#00D8FF",
+  },
+  {
+    id: 6,
+    name: "Next.js",
+    icon: <SiNextdotjs />,
+    color: "#FFFFFF",
   },
   {
     id: 7,
     name: "Tailwind CSS",
     icon: <SiTailwindcss />,
     color: "#06B6D4",
-    experience: "2+ Years",
   },
   {
     id: 8,
-    name: "Node.js",
-    icon: <SiNodedotjs />,
-    color: "#339933",
-    experience: "Learning",
+    name: "Redux",
+    icon: <SiRedux />,
+    color: "#764ABC",
   },
   {
     id: 9,
-    name: "Express.js",
-    icon: <SiExpress />,
-    color: "#111111",
-    experience: "Learning",
+    name: "Vite",
+    icon: <SiVite />,
+    color: "#A78BFA",
   },
   {
     id: 10,
-    name: "MongoDB",
-    icon: <SiMongodb />,
-    color: "#47A248",
-    experience: "Learning",
+    name: "Node.js",
+    icon: <FaNodeJs />,
+    color: "#83CD29",
   },
   {
     id: 11,
-    name: "Git",
-    icon: <SiGit />,
-    color: "#F05032",
-    experience: "2+ Years",
+    name: "Express.js",
+    icon: <SiExpress />,
+    color: "#FFFFFF",
   },
+  {
+    id: 12,
+    name: "MongoDB",
+    icon: <SiMongodb />,
+    color: "#47A248",
+  },
+  {
+    id: 13,
+    name: "Git",
+    icon: <FaGitAlt />,
+    color: "#F05032",
+  },
+  {
+    id: 14,
+    name: "GitHub",
+    icon: <FaGithub />,
+    color: "#FFFFFF",
+  },
+  {
+  id: 15,
+  name: "VS Code",
+  icon: <VscVscode />,
+  color: "#29B6F6",
+},
 ];
 
 const Skills = () => {
   return (
     <section id="skills" className="mt-24">
-
-      <h2 className="text-lg font-bold tracking-widest uppercase text-black mb-10">
-        Tech Stack
+      <h2 className="mb-8 text-xl font-semibold text-gray-800">
+        Tech Stack &amp; Tools
       </h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 max-w-md">
         {skills.map((skill, index) => (
           <motion.div
             key={skill.id}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.4,
-              delay: index * 0.05,
+              duration: 0.35,
+              delay: index * 0.04,
             }}
             viewport={{ once: true }}
-            className="border border-gray-200 rounded-lg p-6 hover:bg-gray-50 transition-colors"
+            title={skill.name}
+            className="group flex flex-col items-center gap-2"
           >
-            <div
-              className="text-4xl mb-4"
-              style={{ color: skill.color }}
-            >
-              {skill.icon}
+            <div className="flex h-[60px] w-[60px] items-center justify-center rounded-2xl bg-[#242938] transition-all duration-300 hover:-translate-y-1 hover:bg-[#30384a] sm:h-[62px] sm:w-[62px]">
+              <span
+                className="text-[36px] transition-transform duration-300 group-hover:scale-110"
+                style={{ color: skill.color }}
+              >
+                {skill.icon}
+              </span>
             </div>
 
-            <h3 className="text-lg font-semibold text-black">
+            <span className="text-center text-xs font-medium text-gray-600">
               {skill.name}
-            </h3>
-
-            <p className="text-sm text-gray-500 mt-2">
-              {skill.experience}
-            </p>
-
+            </span>
           </motion.div>
         ))}
-
       </div>
     </section>
   );
