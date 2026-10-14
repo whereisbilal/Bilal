@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
   faLinkedin,
-  faYoutube,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEye, faDownload } from "@fortawesome/free-solid-svg-icons";
 
 interface GithubUser {
   followers: number;
@@ -20,13 +20,18 @@ const Hero = () => {
 
   useEffect(() => {
     fetch("https://api.github.com/users/mrvornex")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch GitHub data");
+        }
+        return res.json();
+      })
       .then((data: GithubUser) => setGithubData(data))
       .catch((err) => console.error(err));
   }, []);
 
   return (
-    <section className="max-w-4xl mx-auto py-15 font-mono">
+    <section className="max-w-4xl mx-auto px-5 py-15 font-mono">
       <div className="flex flex-col items-start gap-6">
         {/* Profile Image */}
         <img
@@ -42,12 +47,14 @@ const Hero = () => {
 
         {/* Role */}
         <p className="text-lg text-gray-600">
-          Full Stack Developer
+          Frontend Developer | learning Full-Stack Development
         </p>
 
         {/* About */}
         <p className="max-w-3xl leading-8 text-gray-700">
-          I build modern web applications using React, Node.js, and MongoDB. Passionate about writing clean code and continuously learning new technologies.
+          I build modern web applications using React, Node.js, and MongoDB.
+          Passionate about writing clean code and continuously learning new
+          technologies.
         </p>
 
         {/* Social Links */}
@@ -55,7 +62,8 @@ const Hero = () => {
           <a
             href="https://github.com/mrvornex"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
             className="hover:text-black transition"
           >
             <FontAwesomeIcon icon={faGithub} />
@@ -64,81 +72,67 @@ const Hero = () => {
           <a
             href="https://www.linkedin.com/in/mrvornex"
             target="_blank"
-            rel="noreferrer"
-            className="hover:text-black transition"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="hover:text-blue-700 transition"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
 
-          {/* <a
-            href="https://www.youtube.com/@TalkingAIWorldOfficial"
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-black transition"
-          >
-            <FontAwesomeIcon icon={faYoutube} />
-          </a> */}
-
           <a
             href="https://x.com/mrvornex"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="X"
             className="hover:text-black transition"
           >
             <FontAwesomeIcon icon={faXTwitter} />
           </a>
         </div>
 
-        {/* Stats */}
-        {/* <div className="mt-2 space-y-3 text-gray-600">
-          <p className="flex items-center gap-2">
-            <FontAwesomeIcon icon={faYoutube} />
-            <span>78.5K Subscribers</span>
-          </p>
+        {/* Resume Buttons */}
+        <div className="mt-2 flex flex-wrap items-center gap-4">
+          {/* View Resume */}
+          <a
+            href="/Bilal.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-black px-5 py-3 text-black transition hover:bg-black hover:text-white"
+          >
+            <FontAwesomeIcon icon={faEye} />
+            View Resume
+          </a>
 
-          {githubData && (
-            <p className="flex items-center gap-2">
-              <FontAwesomeIcon icon={faGithub} />
-              <span>
-                {githubData.followers} Followers •{" "}
-                {githubData.public_repos} Repositories
-              </span>
-            </p>
-          )}
-        </div> */}
+          {/* Download Resume */}
+          <a
+            href="/Bilal.pdf"
+            download="Muhammad-Bilal-Resume.pdf"
+            className="inline-flex items-center gap-2 rounded-lg bg-black px-5 py-3 text-white transition hover:bg-gray-800"
+          >
+            <FontAwesomeIcon icon={faDownload} />
+            Download Resume
+          </a>
+        </div>
 
-        {/* Resume Button */}
-        <a
-          href="/Bilal.pdf"
-          download="Muhammad-Bilal-Resume.pdf"
-          className="mt-2 px-5 py-3 border border-black rounded-lg hover:bg-black hover:text-white transition"
-        >
-          Download Resume
-        </a>
-
-        {/* Activity Section */}
         {/* Activity Section */}
         <div className="mt-14 w-full">
-          <h2 className="text-3xl font-bold mb-4 tracking-wide">
+          <h2 className="mb-4 text-3xl font-bold tracking-wide text-black">
             ACTIVITY
           </h2>
 
           {githubData && (
-            <p className="flex items-center gap-2">
+            <p className="flex items-center gap-2 text-gray-600">
               <FontAwesomeIcon icon={faGithub} />
-              <span>
-                {/* {githubData.followers} Followers •{" "} */}
-                {githubData.public_repos} Repositories
-              </span>
+              <span>{githubData.public_repos} Repositories</span>
             </p>
           )}
 
-          <p className="text-gray-600 mb-6 mt-5">
+          <p className="mb-6 mt-5 text-gray-600">
             GitHub contributions over the last year.
           </p>
 
-          <div className="w-full flex justify-center overflow-hidden">
-            <div className="origin-top scale-[0.38] sm:scale-[0.65] md:scale-[0.8] lg:scale-84">
+          <div className="w-full overflow-x-auto">
+            <div className="flex min-w-max justify-center">
               <GitHubCalendar
                 username="mrvornex"
                 colorScheme="light"

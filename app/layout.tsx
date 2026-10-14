@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost:3000"),
-  title: "Bilal (mrvornex)",
+  title: "Bilal",
   description: "Portfolio of Bilal",
 
   icons: {
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Muhammad Bilal - Frontend Developer",
-    description: "Portfolio of Muhammad Bilal - React & TypeScript Developer",
-    url: "https://mrvornex.vercel.app",
+    description: "Portfolio of Muhammad Bilal",
+    url: "https://whereisbilal.vercel.app",
     siteName: "Muhammad Bilal Portfolio",
     images: [
       {
