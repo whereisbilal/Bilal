@@ -6,16 +6,16 @@ const techStack = [
   { name: "JavaScript", icon: "/images/javascript-icon.svg" },
   { name: "TypeScript", icon: "/images/typescript-icon.svg" },
   { name: "React", icon: "/images/react-icon.svg" },
-  { name: "Next.js", icon: "/images/next-icon.svg" },
+  { name: "Next.js", icon: "/images/nextjs-icon.webp" },
   { name: "Tailwind CSS", icon: "/images/tailwind-icon.svg" },
-  { name: "Redux", icon: "/images/redux-icon.svg" },
-  { name: "Vite", icon: "/images/vite-icon.svg" },
+  { name: "Redux", icon: "/images/redux-icon.webp" },
+  { name: "Vite", icon: "/images/vite-icon.webp" },
   { name: "Node.js", icon: "/images/nodejs-icon.svg" },
   { name: "Express.js", icon: "/images/expressjs-icon.svg" },
   { name: "MongoDB", icon: "/images/mongodb-icon.svg" },
-  { name: "Git", icon: "/images/git-icon.svg" },
-  { name: "GitHub", icon: "/images/github-icon.svg" },
-  { name: "VS Code", icon: "/images/vscode-icon.svg" },
+  { name: "Git", icon: "/images/git-icon.webp" },
+  { name: "GitHub", icon: "/images/github-icon.webp" },
+  { name: "VS Code", icon: "/images/vscode-icon.webp" },
 ];
 
 const TechStack = () => {
