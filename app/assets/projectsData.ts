@@ -33,7 +33,7 @@ export const projectsData = [
     description:
       "A fake data generator that helps developers create realistic mock data for apps and APIs.",
     image: "/Projects_Img/bg12.png",
-    liveDemo: "https://dumdata.vercel.app/",
+    liveDemo: "https://dumdata.vercel.app/", 
     sourceCode: "https://github.com/mrvornex/DumData",
     techStack: ["Next.js", "Typescript", "Tailwind", "MongoDB", "Api"],
   },
