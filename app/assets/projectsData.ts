@@ -5,7 +5,7 @@ export const projectsData = [
       "A modern logo gallery platform for uploading and showcasing logos.",
     image: "/Projects_Img/bg8.png",
     liveDemo: "https://logovines.vercel.app/",
-    sourceCode: "https://github.com/mrvornex/LogoVines",
+    sourceCode: "https://github.com/whereisbilal/LogoVines",
     techStack: [
       "Next.js",
       "TypeScript",
@@ -25,7 +25,7 @@ export const projectsData = [
       "A platform featuring beginner-to-advanced web development projects.",
     image: "/Projects_Img/bg4.png",
     liveDemo: "https://jsprojectforge.vercel.app/",
-    sourceCode: "https://github.com/mrvornex/JSProjectForge",
+    sourceCode: "https://github.com/whereisbilal/JSProjectForge",
     techStack: ["Next.js", "TypeScript", "Tailwind", "Firebase", "Framer Motion"],
   },
   {
@@ -34,7 +34,7 @@ export const projectsData = [
       "A fake data generator that helps developers create realistic mock data for apps and APIs.",
     image: "/Projects_Img/bg12.png",
     liveDemo: "https://dumdata.vercel.app/", 
-    sourceCode: "https://github.com/mrvornex/DumData",
+    sourceCode: "https://github.com/whereisbilal/DumData",
     techStack: ["Next.js", "Typescript", "Tailwind", "MongoDB", "Api"],
   },
   {
@@ -43,7 +43,7 @@ export const projectsData = [
       "Free temporary & disposable email",
     image: "/Projects_Img/bg11.png",
     liveDemo: "https://mailvines.vercel.app/",
-    sourceCode: "https://github.com/mrvornex/MailVines",
+    sourceCode: "https://github.com/whereisbilal/MailVines",
     techStack: ["Node.js", "Typescript", "Tailwind", "GitHub", "MongoDB"],
   },
   {
@@ -52,7 +52,7 @@ export const projectsData = [
       "A modern e-commerce application for premium hoodies.",
     image: "/Projects_Img/bg5.png",
     liveDemo: "https://hoodanix.vercel.app/",
-    sourceCode: "https://github.com/mrvornex/HoodAnix",
+    sourceCode: "https://github.com/whereisbilal/HoodAnix",
     techStack: [
       "nextjs",
       "react",
@@ -68,7 +68,7 @@ export const projectsData = [
       "A responsive mehndi services website built with Next.js..",
     image: "/Projects_Img/bg6.png",
     liveDemo: "https://amna-s-mehndi-studio.vercel.app/",
-    sourceCode: "https://github.com/mrvornex/AmnaS",
+    sourceCode: "https://github.com/whereisbilal/AmnaS",
     techStack: [
       "nextjs",
       "react",
@@ -84,7 +84,7 @@ export const projectsData = [
       "A modern villa booking website built with React and Tailwind CSS.",
     image: "/Projects_Img/bg2.png",
     liveDemo: "https://villaaa.vercel.app/",
-    sourceCode: "https://github.com/mrvornex/Villa",
+    sourceCode: "https://github.com/whereisbilal/Villa",
     techStack: ["react", "tailwindcss", "react-router", "room-booking", "booking-website", "resend"],
   },
 ];
