@@ -15,7 +15,7 @@ This website highlights my **skills, projects, and coding expertise**, all wrapp
 
 ## 🌐 Live Demo
  
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Now-brightgreen?style=for-the-badge&logo=vercel)](https://imuhammad-bilal.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-View%20Now-brightgreen?style=for-the-badge&logo=vercel)](https://whereisbilal.vercel.app/)
  
 ---
  
@@ -55,7 +55,7 @@ It’s more than a portfolio — it’s a reflection of **my growth as a develop
 1. **Clone the Repository:**
    
    ```bash
-   https://github.com/Bilal742/Muhammad-Bilal.git
+   https://github.com/whereisbilal/Bilal-portfolio
 3. **Install Dependencies:**
    
    ```bash
@@ -83,5 +83,5 @@ It’s more than a portfolio — it’s a reflection of **my growth as a develop
 ## 👨‍💻 Developer
 
 **Muhammad Bilal**  
-🌐 [Portfolio](https://mrvornex.vercel.app/)  
-🐙 [GitHub](https://github.com/mrvornex)
+🌐 [Portfolio](https://whereisbilal.vercel.app/)  
+🐙 [GitHub](https://github.com/whereisbilal)
