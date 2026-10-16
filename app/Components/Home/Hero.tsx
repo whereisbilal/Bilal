@@ -19,7 +19,7 @@ const Hero = () => {
   const [githubData, setGithubData] = useState<GithubUser | null>(null);
 
   useEffect(() => {
-    fetch("https://api.github.com/users/mrvornex")
+    fetch("https://api.github.com/users/whereisbilal")
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch GitHub data");
@@ -92,7 +92,7 @@ const Hero = () => {
         <div className="mt-2 flex flex-wrap items-center gap-4">
           {/* View Resume */}
           <a
-            href="/Bilal.pdf"
+            href="https://imresume.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-black px-5 py-3 text-black transition hover:bg-black hover:text-white"
@@ -104,7 +104,7 @@ const Hero = () => {
           {/* Download Resume */}
           <a
             href="/Bilal.pdf"
-            download="Muhammad-Bilal-Resume.pdf"
+            download="Muhammad Bilal _ Developer Portfolio.pdf"
             className="inline-flex items-center gap-2 rounded-lg bg-black px-5 py-3 text-white transition hover:bg-gray-800"
           >
             <FontAwesomeIcon icon={faDownload} />
